@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>About</title>
+    <script src="script.js"></script>
+  </head>
+  <body onload="loadComments()">
+    <!-- NAVBAR -->
+    <div class ="nav-bar">
+      <a href="about.html"><div class="nav-text text-box"><strong>About</strong></div></a>
+      <a href="projects.html"><div class="nav-text text-box">Projects</div></a>
+      <a href="experience.html"><div class="nav-text text-box">Experience</div></a>
+      <a href="contact.html"><div class="nav-text text-box">Contact</div></a>
+      <div class="nav-icon"><img src="images/about.png"  class="icon-img"/></div>
+    </div>
+    <!-- NAVBAR END -->
+    <h1>Devanshi Udeshi</h1>
+    <div id="img-container"><img src="images/dev_ellipse.png" class="prof-img"/></div>
+
+    <div id="info">
+      <p>Hi there! I’m a rising junior at Dartmouth College, studying Computer Science and Mathematics. Currently, I'm 
+          working as an Engineer at Facebook in Menlo Park. Some of my interests outside of engineering include investing, 
+          economic policy, product strategy, and music.
+      </p>
+      <ul class="nav-text">
+        <li><div class="text" >Education:</div> Dartmouth College </li>
+            B.A. in Computer Science, Mathematics &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; 2018-2022 (Expected) </li>
+            <!-- <p> B.A. in Computer Science, Mathematics    2018-2022 (Expected) -->
+        <li><div class="text" >Relevant Coursework:</div> Object-Oriented Programming, Algorithms, Machine Learning, 
+                            Analysis of Social Networks, Discrete Math, Probability, Game Theory, Abstract Algebra, UI/UX Design I & II </li>
+      </ul>
+      
+      <div id="center">
+        <!-- Comment Section -->
+        <form action="/data" method="POST">
+          <p>Share your thoughts about me:</p>
+          <textarea class="comment-input" name="text-input" id="text-input" required></textarea>
+          <br>
+          <button id="sub" type="submit" onClick='return empty()'>COMMENT</button>
+        </form>
+        <button class="accordion" onclick="displayComments()">Display comments</button>
+        <ul id="history"></ul>
+       </div>
+       <div id="center">
+        <!-- Social Logos -->
+        <a href="https://github.com/devanshiu"><img src="images/github.png"  class="icon-img"/></a>
+        <a href="https://www.linkedin.com/in/d-udeshi/"><img src="images/linkedin.png"  class="icon-img"/></a>
+       </div>
+    </div>
+  </body>
+</html>

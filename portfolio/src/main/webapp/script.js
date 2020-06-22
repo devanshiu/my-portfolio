@@ -13,16 +13,50 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+* week-2 Step 5:
+*/
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+/* Loading comments from server and displaying them */
+function loadComments() {
+  fetch('/data').then(response => response.json()).then((comments) => {
+  const commentElement = document.getElementById('history');
+  comments.forEach((comment) => {
+     console.log('Loading comment: ' + comment);
+    commentElement.appendChild(createCommentElement(comment));
+    })
+  });
+}
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+/* Creates an element that represents a comment */
+function createCommentElement(comment) {
+  const commentElement = document.createElement('li');
+  commentElement.className = 'comment';
+
+  const PElement = document.createElement('p');
+  PElement.innerText = comment.text;
+
+  commentElement.appendChild(PElement);
+  return commentElement;
+}
+
+
+/* Ignores empty or whitespace comments. */
+ function empty() {
+  var text;
+  text = document.getElementById("text-input").value.trim();
+  if (text.length === 0) {
+    alert('Unvalid comment.');
+    return false;
+  }
+}
+
+var clicks = 0;
+function displayComments(){
+  clicks +=1;
+  var comment = document.getElementById('history');
+  if (comment.style.display === "none" || clicks == 1) {
+    comment.style.display = "block";
+  } else {
+    comment.style.display = "none";
+  }
 }

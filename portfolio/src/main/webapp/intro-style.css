@@ -1,0 +1,64 @@
+*{
+ width: fit-content;
+}
+
+body {
+  padding: 40px;
+  background-color: #F0EDE6;
+}
+
+/* Styling and positioning intro text */
+/* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro'); */
+@import url(']https://fonts.googleapis.com/css?family=Montserrat:400,700');
+header > h1 {
+  width: 650px;
+  position: absolute;
+  font: 350% 'Montserrat', sans-serif; 
+  color: #DD7564;
+  text-align: center;
+  left: 50%;
+  top: 28%;
+  transform: translate(-50%, -30%);
+}
+
+/* Rescaling images */
+img {
+  max-width: 15%;
+}
+
+/* Buttons Group */
+.btn-group {
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -30%);
+  margin: auto;
+}
+/* <span class="circle"></span>
+
+.circle:before {
+  content: ' \25CF';
+  font-size: 200px;
+} */
+
+/* Individual button */
+.button {  
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; 
+}
+
+/* Button Image */
+.button figure {
+  margin: 0px 0px 15px;
+}
+
+/* Button Text */
+.button .text {
+  display: inline-block;
+  font: 200% 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #1FA5A6;
+
+  margin: 0 0 15px;
+}
